@@ -22,13 +22,13 @@ public class T03 {
             harga = Double.parseDouble(input.nextLine());
             margin = Double.parseDouble(input.nextLine());
             diskon = margin * -1 / harga;
-            if (diskon >= (double) 40 / 100) {
+            if (diskon > (double) 40 / 100) {
                 keterangan = "Once in a lifetime";
             } else {
-                if (diskon >= (double) 20 / 100 && diskon < (double) 40 / 100) {
+                if ((double) 20 / 100 < diskon && diskon < (double) 40 / 100) {
                     keterangan = "Never come twice";
                 } else {
-                    if (diskon > 0 && diskon < (double) 20 / 100) {
+                    if (diskon <= (double) 20 / 100 && diskon > 0) {
                         keterangan = "No Regret";
                     } else {
                         keterangan = "---";
