@@ -55,7 +55,7 @@ public class T03 {
                 }
             }
             if (kategori.equals("Best Pick") && keterangan.equals("Once in a lifetime")) {
-                ultimate = "The Ultimate Best";
+                ultimate = "The ultimate best";
             } else {
                 ultimate = "---";
             }
