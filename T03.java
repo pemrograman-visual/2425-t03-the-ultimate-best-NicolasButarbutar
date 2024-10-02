@@ -23,7 +23,7 @@ public class T03 {
             margin = Double.parseDouble(input.nextLine());
             diskon = margin * -1 / harga;
             if (diskon >= (double) 40 / 100) {
-                keterangan = "Once in a life time";
+                keterangan = "Once in a lifetime";
             } else {
                 if (diskon >= (double) 20 / 100 && diskon < (double) 40 / 100) {
                     keterangan = "Never come twice";
