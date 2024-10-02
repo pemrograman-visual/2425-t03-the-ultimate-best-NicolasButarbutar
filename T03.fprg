@@ -4,10 +4,10 @@
         <attribute name="name" value="T02"/>
         <attribute name="authors" value="ASUS"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-10-02 04:42:14 PM"/>
+        <attribute name="saved" value="2024-10-02 09:11:10 PM"/>
         <attribute name="created" value="QVNVUztMQVBUT1AtRjc4Q0hCNkc7MjAyNC0wOS0yNzsxMDozMzowNiBBTTsyNjA0"/>
         <attribute name="edited" value="QVNVUztMQVBUT1AtRjc4Q0hCNkc7MjAyNC0wOS0yNzsxMDo0MDo1NCBBTTsxO0FTVVM7TEFQVE9QLUY3OENIQjZHOzIwMjQtMDktMDY7MTA6MTA6NTYgQU07VDAxLmZwcmc7NjA5MA=="/>
-        <attribute name="edited" value="QVNVUztMQVBUT1AtRjc4Q0hCNkc7MjAyNC0xMC0wMjswNDo0MjoxNCBQTTsyOzI3MTU="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtRjc4Q0hCNkc7MjAyNC0xMC0wMjswOToxMToxMCBQTTs0OzI3MTQ="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -25,19 +25,19 @@
                 <input variable="Harga"/>
                 <input variable="Margin"/>
                 <assign variable="Diskon" expression="Margin*(-1)/Harga"/>
-                <if expression="Diskon&gt;=40/100">
+                <if expression="Diskon&gt;40/100">
                     <then>
-                        <assign variable="Keterangan" expression="&quot;Once in a life time&quot;"/>
+                        <assign variable="Keterangan" expression="&quot;Once in a lifetime&quot;"/>
                     </then>
                     <else>
-                        <if expression="Diskon&gt;=20/100 &amp;&amp; Diskon&lt;40/100">
+                        <if expression="20/100 &lt; Diskon &amp;&amp; Diskon &lt; 40/100">
                             <then>
                                 <assign variable="Keterangan" expression="&quot;Never come twice&quot;"/>
                             </then>
                             <else>
-                                <if expression="Diskon&gt;0 &amp;&amp; Diskon&lt;20/100">
+                                <if expression="Diskon &lt;= 20/100 &amp;&amp; Diskon &gt;0">
                                     <then>
-                                        <assign variable="Keterangan" expression="&quot;No Regret&quot;"/>
+                                        <assign variable="Keterangan" expression="&quot;No regret&quot;"/>
                                     </then>
                                     <else>
                                         <assign variable="Keterangan" expression="&quot;---&quot;"/>
@@ -80,7 +80,7 @@
                 </if>
                 <if expression="Kategori == &quot;Best Pick&quot; &amp;&amp; Keterangan == &quot;Once in a lifetime&quot;">
                     <then>
-                        <assign variable="Ultimate" expression="&quot;The Ultimate Best&quot;"/>
+                        <assign variable="Ultimate" expression="&quot;The ultimate best&quot;"/>
                     </then>
                     <else>
                         <assign variable="Ultimate" expression="&quot;---&quot;"/>
