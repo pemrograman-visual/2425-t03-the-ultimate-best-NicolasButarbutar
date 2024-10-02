@@ -29,7 +29,7 @@ public class T03 {
                     keterangan = "Never come twice";
                 } else {
                     if (diskon <= (double) 20 / 100 && diskon > 0) {
-                        keterangan = "No Regret";
+                        keterangan = "No regret";
                     } else {
                         keterangan = "---";
                     }
