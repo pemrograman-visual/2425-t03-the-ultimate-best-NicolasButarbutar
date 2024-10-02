@@ -68,4 +68,3 @@ public class T03 {
         return String.format("%." + digits + "f", value);
     }
 }
-
