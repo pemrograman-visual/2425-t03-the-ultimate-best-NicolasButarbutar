@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="T02"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-02 04:42:14 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtRjc4Q0hCNkc7MjAyNC0wOS0yNzsxMDozMzowNiBBTTsyNjA0"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtRjc4Q0hCNkc7MjAyNC0wOS0yNzsxMDo0MDo1NCBBTTsxO0FTVVM7TEFQVE9QLUY3OENIQjZHOzIwMjQtMDktMDY7MTA6MTA6NTYgQU07VDAxLmZwcmc7NjA5MA=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtRjc4Q0hCNkc7MjAyNC0xMC0wMjswNDo0MjoxNCBQTTsyOzI3MTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ISBN, Judul, Penulis, Penerbit, Format, Kategori, Keterangan, Ultimate" type="String" array="False" size=""/>
+            <declare name="Tahun, Stok" type="Integer" array="False" size=""/>
+            <declare name="Harga, Margin, Rating, Diskon" type="Real" array="False" size=""/>
+            <input variable="ISBN"/>
+            <while expression="ISBN !=&quot;---&quot;">
+                <input variable="Judul"/>
+                <input variable="Penulis"/>
+                <input variable="Tahun"/>
+                <input variable="Penerbit"/>
+                <input variable="Format"/>
+                <input variable="Harga"/>
+                <input variable="Margin"/>
+                <assign variable="Diskon" expression="Margin*(-1)/Harga"/>
+                <if expression="Diskon&gt;=40/100">
+                    <then>
+                        <assign variable="Keterangan" expression="&quot;Once in a life time&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="Diskon&gt;=20/100 &amp;&amp; Diskon&lt;40/100">
+                            <then>
+                                <assign variable="Keterangan" expression="&quot;Never come twice&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="Diskon&gt;0 &amp;&amp; Diskon&lt;20/100">
+                                    <then>
+                                        <assign variable="Keterangan" expression="&quot;No Regret&quot;"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="Keterangan" expression="&quot;---&quot;"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <input variable="Stok"/>
+                <input variable="Rating"/>
+                <if expression="Rating&gt;=4.7">
+                    <then>
+                        <assign variable="Kategori" expression="&quot;Best Pick&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="Rating&gt;=4.5 &amp;&amp; Rating&lt;4.7">
+                            <then>
+                                <assign variable="Kategori" expression="&quot;Must Read&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="Rating&gt;=4.0 &amp;&amp; Rating&lt;4.5">
+                                    <then>
+                                        <assign variable="Kategori" expression="&quot;Recommended&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="Rating&gt;=3.0 &amp;&amp; Rating&lt;4.0">
+                                            <then>
+                                                <assign variable="Kategori" expression="&quot;Average&quot;"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="Kategori" expression="&quot;Low&quot;"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="Kategori == &quot;Best Pick&quot; &amp;&amp; Keterangan == &quot;Once in a lifetime&quot;">
+                    <then>
+                        <assign variable="Ultimate" expression="&quot;The Ultimate Best&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="Ultimate" expression="&quot;---&quot;"/>
+                    </else>
+                </if>
+                <output expression="ISBN&amp;&quot;|&quot;&amp;Judul&amp;&quot;|&quot;&amp;Penulis&amp;&quot;|&quot;&amp;Tahun&amp;&quot;|&quot;&amp;Penerbit&amp;&quot;|&quot;&amp;Format&amp;&quot;|&quot;&amp;Harga&amp;&quot;|&quot;&amp;Margin&amp;&quot;|&quot;&amp;Stok&amp;&quot;|&quot;&amp;tofixed(Rating,1)&amp;&quot;|&quot;&amp;Kategori&amp;&quot;|&quot;&amp;Keterangan&amp;&quot;|&quot;&amp;Ultimate" newline="True"/>
+                <input variable="ISBN"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
