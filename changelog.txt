@@ -1,2 +1,3 @@
 Kami kurang memahami pemakaian looping pada flowgorithm.
 Kami kesulitan dalam memahami dengan soal yang diberikan.
+Kami kesulitan mencari rumus untuk mengulang loopingan.
